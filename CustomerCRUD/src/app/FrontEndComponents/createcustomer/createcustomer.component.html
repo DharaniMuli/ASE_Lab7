@@ -1,0 +1,25 @@
+<div class="mt-4"></div>
+<div class="text-center">
+  <label> <h2>MEAN Stack Customer CRUD</h2></label>
+</div>
+<div class="mt-3"></div>
+
+<form class="form-inline justify-content-center">
+  <div class="row">
+     <div class="col">
+        <input class="form-control" placeholder="Customer ID" type="text" name="customerID" [(ngModel)]="customerID"/>
+     </div>
+
+    <div class="col">
+        <input class="form-control" placeholder="Customer Name"  type="text" name="customerName" [(ngModel)]="customerName"/>
+    </div>
+
+    <div class="col"> 
+        <input class="form-control" placeholder="Customer Email ID"  type="text" name="customerEmailId" [(ngModel)]="customerEmailId"/>
+    </div>
+
+      <button (click)="addCustomer()" class="btn btn-success">Add Customer</button>
+  </div>
+</form>
+<div class="mt-3"></div>
+<app-getcustomer></app-getcustomer>
