@@ -10,6 +10,9 @@ import { DeletecustomerComponent } from './FrontEndComponents/deletecustomer/del
 import { GetcustomerComponent } from './FrontEndComponents/getcustomer/getcustomer.component';
 import { CustomerserviceService} from "./customerservice.service";
 
+import { FormsModule }   from '@angular/forms';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +24,8 @@ import { CustomerserviceService} from "./customerservice.service";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [CustomerserviceService],
   bootstrap: [AppComponent]

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {CustomerserviceService} from "../../customerservice.service";
-
 @Component({
   selector: 'app-createcustomer',
   templateUrl: './createcustomer.component.html',
@@ -14,14 +13,23 @@ export class CreatecustomerComponent implements OnInit {
 
   constructor( private customerService:CustomerserviceService) { }
   addCustomer(){
-    this.customerService.addCustomer(this.customerID,this.customerName,this.customerEmailId)
+    const data = {
+      customer_id: this.customerID,
+      customer_name: this.customerName,
+      customer_emailId: this.customerEmailId
+    };
+    this.customerService.addCustomer(data)
       .subscribe(data => {
-
+        window.location.reload();
       });
-
   }
 
   ngOnInit() {
   }
 
+  clearValues() {
+    this.customerID = null;
+    this.customerEmailId = null ;
+    this.customerName = null;
+  }
 }

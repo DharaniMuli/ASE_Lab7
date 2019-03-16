@@ -16,4 +16,6 @@ let customerSchema = new Schema({
   collection: 'DPCustomers'
 });
 
-module.exports = mongoose.model('customermodel', customerSchema );
+const Customer = mongoose.model('customermodel', customerSchema );
+
+module.exports = Customer;

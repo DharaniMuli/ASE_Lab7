@@ -1,3 +1,26 @@
-<p>
-  editcustomer works!
-</p>
+<style>
+  td{
+    padding: 10px;
+  }
+</style>
+<div *ngIf="customer">
+  <table>
+    <thead>
+    <tr> <td colspan="3"><b>Edit customer information</b></td></tr>
+    </thead>
+    <tr>
+      <td>Customer ID:</td>
+      <td><input type="text" [(ngModel)]="customer.customer_id" ></td>
+    </tr>
+    <tr>
+      <td>Customer Name:</td>
+      <td><input type="text" [(ngModel)]="customer.customer_name" ></td>
+    </tr>
+    <tr>
+      <td>Customer Email:</td>
+      <td><input type="text" [(ngModel)]="customer.customer_emailId" ></td>
+    </tr>
+  </table>
+
+  <button (click)="updateCustomer(customer._id)" class="btn btn-success">Update</button>
+</div>
